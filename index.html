@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Progress Indicator (Stepper) -->
+        <div class="progress-indicator">
+            <div class="step active" data-step="1">1</div>
+            <div class="step" data-step="2">2</div>
+            <div class="step" data-step="3">3</div>
+        </div>
+
+        <!-- Multi-Step Form -->
+        <form id="multiStepForm" novalidate>
+            <!-- Step 1: Basic Details -->
+            <div class="form-step active" data-step="1">
+                <h2>Basic Details</h2>
+                <div class="form-group">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" id="name" name="name" required />
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span>*</span></label>
+                    <input type="date" id="dob" name="dob" required />
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                <div class="form-group">
+                    <label>Gender <span>*</span></label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            <span class="custom-radio"></span> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            <span class="custom-radio"></span> Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            <span class="custom-radio"></span> Other
+                        </label>
+                    </div>
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" id="nextBtn1">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Contact Information -->
+            <div class="form-step" data-step="2">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email" name="email" required />
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required />
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address <span>*</span></label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                    <smal class="error-message" style="color: red;"></small>
+                </div>
+                <div class="button-group">
+                    <button type="button" id="prevBtn2">Back</button>
+                    <button type="button" id="nextBtn2">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Summary and Confirmation -->
+            <!-- Step 3: Summary and Confirmation -->
+            <div class="form-step" data-step="3">
+                <h2>Summary</h2>
+                <div id="summary"></div>
+                <div class="button-group">
+                    <button type="button" id="editBtn">Edit</button>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Include compiled JavaScript (from TypeScript) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
