@@ -1,9 +1,5 @@
-[# formproject
-
-A new Flutter project.
-
 
 ## Steps to run
-* Clone this repo using **git clone *url* **
-* Install dependencies using **flutter pub get**
-* Run the project using **flutter run**
+* Clone this repo using **git clone *https://github.com/Cricketerboy/CreativeFormUi.git* **
+* Compile code using **tsc script.ts**
+* Run the project using **live-server**
